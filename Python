@@ -1,0 +1,241 @@
+
+#   List  = [] ordered and changeable. Duplicates OK
+#   Set   = {} unordered and immutable, but Add/Remove OK. NO duplicates
+#   Tuple = () ordered and unchangeable. Duplicates OK. FASTER
+
+
+variables 
+integers (helegetallen)
+age = 22
+
+print(f"You are {age} years old")
+
+floats comma getallen
+
+age = 22.5
+
+print(f"You are {age} years old")
+
+string is letters of woorden
+age = tweeentwingig
+
+print(f"You are {age} years old")
+
+boolean is treu/ false ( altijd met hoofdletter
+
+running = True
+
+if running:
+        print("the game is running")
+else:
+        print("the game is over")
+
+user input
+# ------------------------------------------------
+# EXERCISE 1 MAD LIBS
+# ------------------------------------------------
+adjective1 = input("Enter an adjective: ")
+noun = input("Enter a noun: ")
+adjective2 = input("Enter an adjective: ")
+verb = input("Enter a verb: ")
+adjective3 = input("Enter an adjective: ")
+
+print(f"Today I went to a {adjective1} zoo.")
+print(f"In an exhibit, I saw {noun}.")
+print(f"{noun} was {adjective2} and {verb}ing.")
+print(f"I was {adjective3}!")
+
+# ------------------------------------------------
+# EXERCISE 2 AREA CALC
+# ------------------------------------------------
+length = float(input("Enter the length: "))
+width = float(input("Enter the width: "))
+
+#area = length * width
+#print(f"The area is: {area}cm^2")
+
+# ------------------------------------------------
+# EXERCISE 3 SHOPPING CART
+# ------------------------------------------------
+item = input("What item would you like to buy?: ")
+price = float(input("What is the price?: "))
+quantity = int(input("How many would you like?: "))
+
+total = price * quantity
+
+print(f"You have bought {quantity} x {item}/s")
+print(f"Your total is: ${round(total, 2)}")     # round(total, 2) is voor het afronden met 2 decimalen achter de comma
+
+
+if elif else
+
+
+# if = Do some code IF condition is True
+# else = Do something else if above condition/s are False
+
+# —---------------------
+#   EXAMPLE 1
+# —---------------------
+age = int(input("Enter your age: "))
+
+if age >= 100:
+   print("You are too old to sign up")
+elif age >= 18:
+   print("You are now signed up")
+elif age < 0:
+   print("You haven't been born yet")
+else:
+   print("You must be 18+ sign up")
+
+# —---------------------
+#   EXAMPLE 2
+# —---------------------
+response = input("Do you want food (Y/N)?: ")
+
+if response == "Y":
+   print("Have some food")
+else:
+   print("No food for you!")
+
+# —---------------------
+#   EXAMPLE 3
+# —---------------------
+name = input("Enter your name: ")
+
+if name == "":
+   print("You did not enter your name!")
+else:
+   print(f"Hello {name}")
+
+# —---------------------
+#   EXAMPLE 4
+# —---------------------
+online = False
+
+if online :
+   print("You are online")
+else:
+   print("You are offline")
+
+for loops 
+
+# for loops = execute a block of code a fixed number of times.
+#                     You can iterate over a range, string, sequence, etc.
+
+# ---------------- EXAMPLE 1 ----------------
+
+for x in range(1, 11):
+   print(x)
+
+# ---------------- EXAMPLE 2 ----------------
+
+for x in reversed(range(1, 11)):
+   print(x)
+
+print("Happy New Year!")
+
+# ---------------- EXAMPLE 3 ----------------
+
+for x in range(1, 11, 2):
+   print(x)
+
+# ---------------- EXAMPLE 4 ----------------
+
+credit_card = "1234-5678-9012-3456"
+
+for x in credit_card:
+   print(x)
+
+# ---------------- CONTINUE ----------------
+
+for x in range(1, 21):
+   if x == 13:
+       continue
+   else:
+       print(x)
+
+# ---------------- BREAK ----------------
+
+for x in range(1, 21):
+   if x == 13:
+       break
+   else:
+       print(x)
+
+While loop
+
+#while loop = perform some code WHILE some condition remains true
+
+# ---------------- EXAMPLE 1 ----------------
+
+name = input("Enter your name: ")
+
+while name == "":
+   print("You did not enter your name!")
+   name = input("Enter your name: ")
+
+print(f"Hello {name}")
+
+# ---------------- EXAMPLE 2 ----------------
+
+age = int(input("Enter your age: "))
+
+while age < 0:
+   print("Age can't be negative")
+   age = int(input("Enter your age: "))
+
+print(f"You are {age} years old")
+
+
+# ---------------- EXAMPLE 3 ----------------
+
+food = input("Enter a food you like (q to quit): ")
+
+while not food == "q":
+   print(f"You like {food}")
+   food = input("Enter another food you like (q to quit): ")
+
+print("bye")
+
+# ---------------- EXAMPLE 4 ----------------
+
+num = int(input("Enter a # between 1 - 10: "))
+
+while num < 1 or num > 10:
+    print(f"{num} is not valid")
+    num = int(input("Enter a # between 1 - 10: "))
+
+print(f"You picked the number {num}")
+
+string
+
+
+# -------------------------------
+# STRING METHODS
+# -------------------------------
+# name = input("Enter your name: ")
+# phone_number = input("Enter your phone #: ")
+
+# length = len(name)
+# index = name.find(" ")
+# name = name.capitalize()
+# name = name.upper()
+# name = name.lower()
+# result = name.isdigit()
+# result = name.isalpha()
+# result = phone_number.count(" ")
+# phone_number = phone_number.replace("-", "")
+
+# -------------------------------
+#        EXERCISE
+# -------------------------------
+username = input("Enter a username: ")
+
+if len(username) > 12:
+   print("Your name can't be more than 12 characters")
+elif not username.find(" ") == -1:
+   print("Your username can't contain spaces")
+elif not username.isalpha():
+   print("Your username can't contain digits")
+else:
+   print(f"Welcome {username}!")
